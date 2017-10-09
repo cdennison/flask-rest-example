@@ -1,0 +1,239 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a multiple choice test API demo.  ",
+    "version": "1.0.0",
+    "title": "Multiple Choice Test"
+  },
+  "host": "localhost:5000",
+  "basePath": "/v1",
+  "paths": {
+    "/problems": {
+      "post": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Create a new problem",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Problem"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/problems/{id}": {
+      "get": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Get a problem",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of problem to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Update a problem",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of problem to update",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Problem"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Delete a problem",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of problem to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/problems/filter": {
+      "post": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Filter problems by these fields",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Filter"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/problems/{id}/solve/{answer}": {
+      "get": {
+        "tags": [
+          "problems"
+        ],
+        "summary": "Solve a problem",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of problem to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "answer",
+            "in": "path",
+            "description": "answer to problem",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Problem": {
+      "type": "object",
+      "required": [
+        "question",
+        "answer"
+      ],
+      "properties": {
+        "question": {
+          "type": "string",
+          "example": "What is 1+1?"
+        },
+        "answer": {
+          "type": "string",
+          "example": "2"
+        },
+        "distraction1": {
+          "type": "string",
+          "example": "1"
+        },
+        "distraction2": {
+          "type": "string",
+          "example": "3"
+        },
+        "distraction3": {
+          "type": "string",
+          "example": "4"
+        },
+        "distraction4": {
+          "type": "string",
+          "example": "5"
+        },
+        "distraction5": {
+          "type": "string",
+          "example": "6"
+        }
+      }
+    },
+    "Filter": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string",
+          "example": "1754"
+        },
+        "sort": {
+          "type": "string",
+          "example": "ASC"
+        },
+        "limit": {
+          "type": "integer",
+          "example": 10
+        },
+        "page_start": {
+          "type": "integer",
+          "example": 2
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

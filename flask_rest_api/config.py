@@ -1,16 +1,20 @@
 class Development(object):
     DEBUG = True
 
-    SQLALCHEMY_DATABASE_URI = 'postgres://user:pass@localhost/my_database'
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
+    CSV_REL_FILE_PATH='code_challenge_question_dump.csv'
 
 class Testing(object):
     DEBUG = False
+    # SQLALCHEMY_ECHO = True
 
-    SQLALCHEMY_DATABASE_URI = 'postgres://user:pass@test/my_database'
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
+
+    CSV_REL_FILE_PATH='code_challenge_question_dump_testing.csv'
 
 
 class Production(object):
     DEBUG = False
 
-    SQLALCHEMY_DATABASE_URI = 'postgres://user:pass@prod/my_database'
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
