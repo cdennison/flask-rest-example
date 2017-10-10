@@ -36,6 +36,7 @@ Try out the APIs
 
 #### APIs implmented
 •	I implemented “editing” a row using PUT and did not implment PATCH because it would be extra work and wasn’t required
+•	I implemented "get a listing of all questions" as a problems/filter instead of /GET problems because I wanted to enfore a default limit.
 •	I named the API “problems” because each entity is a “test problem”
 •	I implemented a simple “solve” API because the that seemed to be the actual use case – to try and solve a problem with the correct answer
 

@@ -157,7 +157,8 @@
         "tags": [
           "problems"
         ],
-        "summary": "Filter problems by these fields",
+        "summary": "Filter problem questions by these fields.",
+        "description": "They will be applied in the order of search,sort,page,limit. Valid sorts are \"asc\" or \"desc.\"",
         "parameters": [
           {
             "in": "body",
@@ -273,7 +274,7 @@
         },
         "sort": {
           "type": "string",
-          "example": "ASC"
+          "example": "desc"
         },
         "limit": {
           "type": "integer",
