@@ -1,5 +1,6 @@
 flask==0.10.1
 flask-io==1.10.0
 flask-sqlalchemy==2.1
+Flask-Cors==3.0.3
 sqlalchemy-utils==0.31.6
 psycopg2==2.6.1

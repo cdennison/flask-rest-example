@@ -3,7 +3,7 @@ from .. import db
 class Problem(db.Model):
     __tablename__ = 'problems'
 
-    id = db.Column(db.Integer(), primary_key=True, nullable=False, autoincrement=True)  # defaults to auto inc
+    id = db.Column(db.Integer(), primary_key=True, nullable=False, autoincrement=True)
     question = db.Column(db.String(100), nullable=False)
     answer= db.Column(db.String(100), nullable=False)
     distraction1=db.Column(db.String(100))

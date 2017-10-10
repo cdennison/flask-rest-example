@@ -58,6 +58,13 @@ class TestView(unittest.TestCase):
         problems = json.loads(response.get_data(as_text=True))
         assert response.status_code == 200
 
+        assert self.get_ids(problems)==[1, 2, 3, 4]
+
+        data={'limit':4,'sort':'desc'}
+        response = self.client.post('/v1/problems/filter', data=json.dumps(data), content_type='application/json')
+        problems = json.loads(response.get_data(as_text=True))
+        assert response.status_code == 200
+
         assert self.get_ids(problems)==[3, 5, 4, 10]
 
         data={'limit':4,'sort':'asc'}

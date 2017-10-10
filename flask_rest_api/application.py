@@ -4,7 +4,6 @@ import os
 from flask import Flask
 from werkzeug.utils import import_string
 from . import config, db, io
-from flasgger import Swagger
 from flask_cors import CORS, cross_origin
 import csv
 import traceback

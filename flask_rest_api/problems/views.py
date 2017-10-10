@@ -37,13 +37,13 @@ def get_problem(id):
 def list_companies(filter):
     query = Problem.query
 
-    if 'search' in filter:
+    if 'search' in filter and filter['search']!='':
         query = query.filter(Problem.question.contains(filter['search']))
 
     if 'sort' in filter:
-        if filter['sort']=='asc':
+        if filter['sort'].lower()=='asc':
             query=query.order_by(Problem.question.asc())
-        else:
+        elif filter['sort'].lower()=='desc':
             query=query.order_by(Problem.question.desc())
 
     if 'page_start' in filter:
@@ -54,8 +54,8 @@ def list_companies(filter):
         limit=filter['limit']
     query = query.limit(limit)
 
-    for i in query.all():
-        print (i.question)
+    # for i in query.all():
+    #     print (i.question)
 
     return query.all()
 

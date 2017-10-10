@@ -33,8 +33,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       }
@@ -57,8 +66,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       },
@@ -88,8 +106,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       },
@@ -110,8 +137,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "204": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       }
@@ -134,8 +170,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       }
@@ -165,8 +210,17 @@
           }
         ],
         "responses": {
-          "404": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
             "description": "Invalid input"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Unknown error"
           }
         }
       }
