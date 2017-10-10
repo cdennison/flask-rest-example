@@ -5,11 +5,11 @@ https://github.com/viniciuschiele/flask-rest-example
 (requires Python3)
 
 ### Clone
-git clone …
+git clone https://github.com/cdennison/flask-rest-example
 
 ### Setup virtualenv (optional)
 Run like this on OSX
-git clone ...
+
 python3 -m venv env
 source env/bin/activate
 
@@ -19,7 +19,6 @@ pip3 install -r requirements.txt
 If there are still dependency issues you can try:
 
 pip3 install -r requirements_extended.txt
-
 
 ### Test
 python3 -m unittest discover tests
