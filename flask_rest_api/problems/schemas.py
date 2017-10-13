@@ -1,5 +1,6 @@
 from flask_io import fields, Schema, post_dump
 
+
 class ProblemSchema(Schema):
     id = fields.Integer(dump_only=True)
     question = fields.String(required=True)
@@ -13,6 +14,7 @@ class ProblemSchema(Schema):
     @post_dump
     def make_object(self, data):
         return data
+
 
 class FilterSchema(Schema):
     search = fields.String(required=False)
